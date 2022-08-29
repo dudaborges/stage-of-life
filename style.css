@@ -27,3 +27,8 @@ footer{
     color: white;
     text-align: center;
 }
+
+#res{
+    background-color: rgb(137, 140, 158);
+    border-radius: 5px;
+}

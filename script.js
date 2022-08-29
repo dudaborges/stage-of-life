@@ -49,6 +49,8 @@ function verificar(){
         }
 
         res.style.textAlign = 'center'
+        res.style.color = 'white'
+        res.style.fontFamily = 'Arial'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         res.appendChild(img)
         //significa adicionar um elemento
