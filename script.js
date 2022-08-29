@@ -11,14 +11,36 @@ function verificar(){
         var fsex = document.getElementsByName('radsex') //se fosse pelo id teria que fazer duas variáveis
         var idade = ano - fano.value
         var genero = ''
+        var img = document.createElement('img')
+        img.setAttribute('id', 'foto') //para colocar o id no elemento criado
+
         
         //Se o formulário sexo for da posição zero selecionado será masculino
         if(fsex[0].checked){
             genero = 'Homem'
+            if (idade >= 0 && idade < 10){
+                //criança
+            } else if (idade < 21){
+                //jovem
+            } else if (idade < 50){
+                //adulto
+            } else {
+                //idoso
+            }
         } else {
             genero = 'Feminino'
+            if (idade >= 0 && idade < 10){
+                //criança
+            } else if (idade < 21){
+                //jovem
+            } else if (idade < 50){
+                //adulto
+            } else {
+                //idoso
+            }
         }
 
+        res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     }
 }
